@@ -1,0 +1,23 @@
+{
+  "name": "umi-plugin-dva-state-typing",
+  "version": "0.0.3",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "father build"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@umijs/utils": "^4.0.57"
+  },
+  "devDependencies": {
+    "father": "^4.1.4",
+    "umi": "^4.0.51"
+  }
+}
