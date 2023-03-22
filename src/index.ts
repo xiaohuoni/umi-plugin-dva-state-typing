@@ -17,7 +17,9 @@ ${
           const { file, namespace } = model;
           // prettier-ignore
           // export type { IndexModelState } from '/Users/xiaohuoni/next-alita-app/src/models/index';
-          return `export type { ${namespace.replace(/( |^)[a-z]/g, (L) => L.toUpperCase())}ModelState } from '${winPath(file.replace(extname(file), ''))}';`;
+          // why: replace .index?
+          // namespace = 'AAA.index'
+          return `export type { ${namespace.replace(/.index/,'').replace(/( |^)[a-z]/g, (L) => L.toUpperCase())}ModelState } from '${winPath(file.replace(extname(file), ''))}';`;
         })
         .join("\r\n")
     : ""
